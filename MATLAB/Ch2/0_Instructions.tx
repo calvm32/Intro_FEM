@@ -1,0 +1,14 @@
+Chapter 2: The Finite Element Method in 1D
+
+Assume the model problem is
+
+    -(au')' = f, for x in [0,L]
+    au'(0) = k_0(u(0) - g_0)
+    -au'(L) = k_1(u(L) - g_L)
+
+where , k_0, k_L >= 0, g_0, g_L are constants, 
+f is a given function, and a>0 is a given function.
+
+We call kappa=[k_0, k_L] and g=[g_0, g_L].
+
+Using this notation, substitute values into Solver1D.m.
