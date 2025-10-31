@@ -1,0 +1,28 @@
+Chapter 2: The Finite Element Method in 1D
+
+----
+
+Assume the model problem is
+
+    -(pu')' + qu = f, for x in [a,b]
+    p(a)u'(a)=kappa_0(u(a)-alpha_0)+alpha_1
+    -p(b)u'(b)=kappa_1(u(b)-beta_0)+beta_1
+
+where , kappa_i >= 0, alpha_i, beta_i are constants, 
+f is a given source function, and p,q >= 0 are other given functions.
+
+We call kappa=[kappa_0, kappa_1], alpha=[alpha_0, alpha_1], beta=[beta_0, beta_1]
+
+----
+
+Note:
+1) q = 0, then alpha_1=beta_1=0
+2) Dirichlet:   u(a) = alpha, u(b) = beta   ==>     alpha_1=beta_1=0, kappa_0=kappa_1=large, 
+                                                    alpha_0=alpha, beta_0=beta
+3) Neumann:     u'(a) = alpha, u'(b) = beta ==>     alpha_1=alpha*p(a), beta_1=beta*p(b), 
+                                                    kappa_0=kappa_1=0, alpha_0=beta_0=0  
+3) Robin:                                   ==>     mix of above
+
+----
+
+Substitute values directly into Poisson_Solver_1D.m.

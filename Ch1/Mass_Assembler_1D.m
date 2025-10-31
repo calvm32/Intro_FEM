@@ -1,5 +1,5 @@
-function M = MassAssembler1D(x)
-% Function to build the gloabal mass matrix
+function M = Mass_Assembler_1D(x)
+% Function to build the global mass matrix
 %
 % Parameters
 % ----------
@@ -7,7 +7,7 @@ function M = MassAssembler1D(x)
 %
 % Returns
 % -------
-% M     : gloabl mass matrix
+% M     : global mass matrix
    
     n = length(x)-1; % number of subintervals
     M = zeros(n+1,n+1); % allocate mass matrix

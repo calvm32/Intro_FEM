@@ -1,0 +1,6 @@
+Chapter 3: Piecewise Polynomial Approximation in 2D
+
+----
+
+To find the L^2 Projection of a 2-dimensional function, 
+use L2_Projector_2D.m

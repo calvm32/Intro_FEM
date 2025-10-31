@@ -1,4 +1,4 @@
-function b = LoadAssembler1D(x,f)
+function b = Load_Assembler_1D(x,f)
 % Function to build the load vector
 %
 % Parameters

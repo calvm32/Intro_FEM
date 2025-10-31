@@ -1,4 +1,4 @@
-function [b] = SourceAssembler1D(x, f, kappa, g)
+function [b] = Source_Assembler_1D(x, f, kappa, alpha, beta)
 % Function to assemble the source vector for 1D FEM
 %
 % Parameters
@@ -12,8 +12,8 @@ function [b] = SourceAssembler1D(x, f, kappa, g)
 % -------
 % b         : global source vector
 
-    b = LoadAssembler1D(x, f);   % from Chapter 1
-    b(1)   = b(1)   + kappa(1)*g(1);
-    b(end) = b(end) + kappa(2)*g(2);
+    b = Load_Assembler_1D(x, f);    % from Chapter 1
+    b(1)   = b(1)   + kappa(1)*alpha(1) - alpha(2);
+    b(end) = b(end) + kappa(2)*beta(1)  + beta(2);
 
 end
